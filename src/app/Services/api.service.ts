@@ -17,10 +17,6 @@ export class ApiService {
     this.socket = io(this.url);
   }
 
-  public sendMessage(message) {
-    this.socket.emit('new-message', message);
-  }
-
   public getMessages = () => {
     return Observable.create((observer) => {
         this.socket.on('chats', (message) => {
