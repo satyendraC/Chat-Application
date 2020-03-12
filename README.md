@@ -4,7 +4,7 @@ Build on node 10.15.3 and mysql
  
 Run my-sql server
 
-Create database 'test-sample-database' ( change the database and default setting in util.database.js)
+Create database 'test-sample-database' ( change the database and default setting in util/database.js)
 
 Run npm install
 
