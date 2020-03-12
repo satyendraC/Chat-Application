@@ -1,0 +1,44 @@
+<div class="chat h-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="mt-3 heading32_sb text-center text-secondary">
+                    {{recieversId.name | titlecase}}
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="d-flex align-items-center h-100">
+                    <div class="chat__container w-100 mt-3 shadow rounded px-4" #scrollMe>
+                        <div class="text-center mt-5" *ngIf="(msgArray.length == 0 && !load)">
+                            <div class="text-secondary heading18_sb">Send Message to start your conversation.</div>
+                        </div>
+                        <div *ngFor="let i of msgArray"  class="my-5" [ngClass]="{'d-flex': i.user_id_sender == sendersId, 
+                        'justify-content-end': i.user_id_sender == sendersId}">
+                            <div>
+                                <div class="bg-primary p-3 text-white rounded d-inline-block" [class.bg-success]="i.user_id_sender == sendersId">
+                                    <div class="py-2 heading16_r">
+                                        {{i.message}}
+                                    </div>
+                                    <div class="border-top py-2 heading12_r text-dark">
+                                        {{i.createdAt | date: 'short'}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="mt-2">
+                    <textarea name="" id="" cols="10" rows="3" class="form-control" placeholder="Send Message..." [(ngModel)]="msg"></textarea>
+                </div>
+            </div>
+            <div class="col-6 mx-auto">
+                <div class="mt-4">
+                  <button class="btn btn-primary w-100 py-2" (click)="sendMessage()"> SEND </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+
+<router-outlet></router-outlet>
+
+
+<div class="toaster bg-danger p-3 rounded" *ngIf="common.errBool">
+    <div class="heading18_sb text-white">
+       {{common.errMessage}}
+    </div>
+</div>

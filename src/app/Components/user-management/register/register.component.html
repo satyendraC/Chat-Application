@@ -1,0 +1,52 @@
+<div class="full_height_cont login_cont login_bg">
+    <div class="col-lg-4 col-md-7 col-10">
+        <div class="login_box">
+            <div class="heading">Register</div>
+            <form class="content" [formGroup]='form' novalidate (submit)="register()">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" formControlName="fullName">
+                    <div class="font12" *ngIf="form.get('fullName').touched">
+                        <div class="text-danger">
+                            <span *ngIf='form.get("fullName").hasError("required")'>Full Name is required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" formControlName="email">
+                    <div class="font12" *ngIf="form.get('email').touched">
+                        <div class="text-danger">
+                            <span *ngIf='form.get("email").hasError("required")'>Email Address is required</span>
+                            <span *ngIf='form.get("email").hasError("email") && !form.get("email").hasError("required")'>Please enter valid Email address</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="number" class="form-control" formControlName="phoneNumber" maxlength="10" minlength="10">
+                    <div class="font12" *ngIf="form.get('phoneNumber').touched">
+                        <div class="text-danger">
+                            <span *ngIf='form.get("phoneNumber").hasError("required")'>Phone Number is required</span>
+                            <span *ngIf='form.get("phoneNumber").hasError("pattern") && !form.get("phoneNumber").hasError("required")'>Please enter valid Phone Number</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                    <div class="font12" *ngIf="form.get('password').touched">
+                        <div class="text-danger">
+                            <span *ngIf='form.get("password").hasError("required")'>Password is required</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="form.invalid">Register</button>
+            </form>
+
+            <div class="cr_grey-txt-999 heading16_sb cn_cursor-p p-3 text-center cn_no-outline" routerLink="/user-manage">
+                Already have account? Login
+            </div>
+        </div>
+    </div>
+</div>

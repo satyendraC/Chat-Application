@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive mt-5 shadow bg-white">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="heading18_sb">#</th>
+                        <th scope="col" class="heading18_sb">Full name</th>
+                        <th scope="col" class="heading18_sb">Email</th>
+                        <th scope="col" class="heading18_sb">Phone</th>
+                        <th scope="col" class="heading18_sb">Created At</th>
+                        <th scope="col" class="heading18_sb">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="" *ngFor="let i of users; index as k">
+                        <td class="heading16_r">{{k+1}}</td>
+                        <td class="heading16_r">{{i.name}}</td>
+                        <td class="heading16_r">{{i.email}}</td>
+                        <td class="heading16_r">{{i.phone}}</td>
+                        <td class="heading16_r">{{i.createdAt | date}}</td>
+                        <td class="heading16_r"><button class="btn btn-outline-info" (click)="routeToChat(i.id, i.name)">Chat</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="text-center p-3 heading24_sb text-primary" *ngIf="users.length == 0">
+                    No Users Available to Chat
+                  </div>
+            </div>
+        </div>
+    </div>
+  
+</div>

@@ -1,0 +1,389 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli:400,500,600,700,800&display=swap');
+
+
+// ============================ Color Variables =======================================
+
+$primary_color: #ff6400;
+$secondary_color: #0088ab;
+$tertiary_color: #0088ab;
+$primary_color_dark: #ff6400;
+$secondary_color_dark: #0088ab;
+$tertiary_color_dark: #0088ab;
+
+$grey_aaa: #aaa;
+$grey_ccc: #ddd;
+$grey_eee: #eee;
+$grey_ddd: #ddd;
+$grey_333: #333;
+$grey_666: #666;
+$grey_999: #999;
+
+// ======================== fonts family and sizes =====================================
+
+.heading {
+
+    &32_r,
+    &28_r,
+    &24_r,
+    &20_r,
+    &18_r,
+    &16_r,
+    &14_r,
+    &12_r {
+        font-family: 'Muli', sans-serif;
+        font-weight: 400;
+    }
+
+    &32_m,
+    &28_m,
+    &24_m,
+    &20_m,
+    &18_m,
+    &16_m,
+    &14_m,
+    &12_m {
+        font-family: 'Muli', sans-serif;
+        font-weight: 500;
+    }
+
+    &32_sb,
+    &28_sb,
+    &24_sb,
+    &20_sb,
+    &18_sb,
+    &16_sb,
+    &14_sb,
+    &12_sb {
+        font-family: 'Muli', sans-serif;
+        font-weight: 600;
+    }
+
+    &32_b,
+    &28_b,
+    &24_b,
+    &20_b,
+    &18_b,
+    &16_b,
+    &14_b,
+    &12_b{
+        font-family: 'Muli', sans-serif;
+        font-weight: 700;
+    }
+
+    &32_xb,
+    &28_xb,
+    &24_xb,
+    &20_xb,
+    &18_xb,
+    &16_xb,
+    &14_xb,
+    &12_xb {
+        font-family: 'Muli', sans-serif;
+        font-weight: 800;
+    }
+   
+    &32_b,
+    &32_sb,
+    &32_r,
+    &32_m,
+    &32_xb {
+      font-size: 2rem; //32px
+    }
+  
+    &28_b,
+    &28_sb,
+    &28_r,
+    &28_m,
+    &28_xb {
+      font-size: 1.75rem; //28px
+    }
+
+    &24_b,
+    &24_sb,
+    &24_r,
+    &24_m,
+    &24_xb {
+      font-size: 1.25rem; //24px
+    }
+  
+    &20_b,
+    &20_sb,
+    &20_r,
+    &20_m,
+    &20_xb {
+      font-size: 1.25rem; //20px
+    }
+  
+    &18_b,
+    &18_sb,
+    &18_r,
+    &18_m,
+    &18_xb {
+      font-size: 1.125rem; //18px
+    }
+  
+    &16_b,
+    &16_sb,
+    &16_r,
+    &16_m,
+    &16_xb {
+      font-size: 1rem; //16px
+    }
+  
+    &14_b,
+    &14_sb,
+    &14_r,
+    &14_m,
+    &14_xb {
+      font-size: 0.875rem; //14px
+    }
+  
+    &12_b,
+    &12_sb,
+    &12_r,
+    &12_m,
+    &12_xb {
+      font-size: 0.75rem; //12px
+    }
+}
+
+// ================================ Color Classes =====================================
+
+.cr{
+    &_pri{
+        &-l{
+            &-txt{
+                color: $primary_color;
+            }
+            &-bg{
+                background-color: $primary_color;
+            }
+        }
+        &-d{
+            &-txt{
+                color: $primary_color_dark;
+            }
+            &-bg{
+                background-color: $primary_color_dark;
+            }
+        }
+    }
+    
+    &_sec{
+        &-l{
+            &-txt{
+                color: $secondary_color;
+            }
+            &-bg{
+                background-color: $secondary_color;
+            }
+        }
+        &-d{
+            &-txt{
+                color: $secondary_color_dark;
+            }
+            &-bg{
+                background-color: $secondary_color_dark;
+            }
+        }
+    }
+    
+    &_ter{
+        &-l{
+            &-txt{
+                color: $tertiary_color;
+            }
+            &-bg{
+                background-color: $tertiary_color;
+            }
+        }
+        &-d{
+            &-txt{
+                color: $tertiary_color_dark;
+            }
+            &-bg{
+                background-color: $tertiary_color_dark;
+            }
+        }
+    }
+    
+    &_grey{
+        &-txt{
+            &-aaa{
+                color: #aaa;
+            }
+            &-ccc{
+                color: #ccc;
+            }
+            &-ddd{
+                color: #ddd;
+            }
+            &-eee{
+                color: #eee;
+            }
+            &-333{
+                color: #333;
+            }
+            &-666{
+                color: #666;
+            }
+            &-999{
+                color: #999;
+            }
+        }
+
+        &-bg{
+            &-aaa{
+                background-color: #aaa;
+            }
+            &-ccc{
+                background-color: #ccc;
+            }
+            &-ddd{
+                background-color: #ddd;
+            }
+            &-eee{
+                background-color: #eee;
+            }
+            &-333{
+                background-color: #333;
+            }
+            &-666{
+                background-color: #666;
+            }
+            &-999{
+                background-color: #999;
+            }
+        }
+
+    }  
+}
+
+// ================================ Commonly Used Classes =====================================
+
+.cn{
+    &_cursor{
+        &-p{
+            cursor: pointer;
+        }
+    }
+    
+    &_word{
+        &-break-a{
+            word-break: break-all;
+        }
+        &-break-w{
+            word-break: break-word;
+        }
+        &-no-wrap{
+            white-space: nowrap;
+        }
+        &-wrap{
+            white-space: normal;
+        }
+        &-deco-none{
+            text-decoration: none;
+        }
+    }
+
+    &_no-outline{
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+
+.toaster{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    // background-color: rgba(220,53,69,0.7);
+}
+
+
+
+.full_height_cont{
+    height: 100%;
+    min-height: 100vh;
+}
+
+.login_bg{
+    background: #eaeaea;
+}
+
+.login_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_box{
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.05);
+    padding-top: 15px;
+    border: 1px solid #f5f5f5;
+    max-width: 400px;
+    border-radius: 5px;
+    margin: auto;
+    background: #fff;
+
+    .heading{
+        border-bottom: 1px solid #f5f5f5;
+        padding-bottom: 15px;
+        padding-left: 40px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+    }
+
+    .content{
+        padding: 40px;
+        padding-top: 20px;
+    }
+}
+
+.main_cont{
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.table{
+    border: 1px solid #dee2e6;
+}
+
+.student_profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.btn:disabled{
+    cursor: not-allowed;
+}
+
+.dashboard{
+    background-color: #eaeaea;
+    height: 100vh;
+    .chat__container{
+        background-color: #fff;
+        max-height: calc(100vh - 340px);
+        overflow-y: auto;
+    }
+}
+
+
+
